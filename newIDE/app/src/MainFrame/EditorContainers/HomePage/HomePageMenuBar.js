@@ -10,6 +10,7 @@ import VerticalTabButton, {
 } from '../../../UI/VerticalTabButton';
 import Preferences from '../../../UI/CustomSvgIcons/Preferences';
 import GDevelopGLogo from '../../../UI/CustomSvgIcons/GDevelopGLogo';
+import Pixelforgeicon from '../../../UI/CustomSvgIcons/Pixelforgeicon';
 import GDevelopThemeContext from '../../../UI/Theme/GDevelopThemeContext';
 import Paper from '../../../UI/Paper';
 import {
@@ -99,7 +100,7 @@ const HomePageMenuBar = ({
       onClick: () => {},
       // onClick: onOpenAbout,
       getIcon: ({ color, fontSize }) => (
-        <GDevelopGLogo fontSize={fontSize} color={color} />
+        <Pixelforgeicon fontSize={fontSize} color={color} />
       ),
     },
   ];
