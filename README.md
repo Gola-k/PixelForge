@@ -9,7 +9,7 @@ PixelForge is a full-featured, no-code, open-source game development software. Y
 | ------------- | ------------------------------------------------------------------------------------------------- |
 | `Core`        | ClickEngine core library, containing common tools to implement the IDE and work with ClickEngine games. |
 | `GDJS`        | The game engine, written in TypeScript, using PixiJS (WebGL), powering all ClickEngine games.        |
-| `ClickEngine.js` | Bindings of `Core`, `GDJS` and `Extensions` to JavaScript (with WebAssembly), used by the IDE.    |
+| `PixelForge.js` | Bindings of `Core`, `GDJS` and `Extensions` to JavaScript (with WebAssembly), used by the IDE.    |
 | `newIDE`      | The game editor, written in JavaScript with React, Electron and PixiJS.                           |
 | `Extensions`  | Extensions for the game engine, providing objects, behaviors, events and new features.            |
 
