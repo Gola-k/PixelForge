@@ -190,11 +190,7 @@ const GameCard = ({ nft }) => {
     setError(null);
 
     try {
-<<<<<<< HEAD
-      const response = await fetch('https://chainlink.chainbros.xyz//play', {
-=======
       const response = await fetch('https://chainlink.chainbros.xyz/play', {
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(url),
@@ -217,11 +213,7 @@ const GameCard = ({ nft }) => {
           if (newWindow.closed) {
             clearInterval(checkWindowClosed);
             // console.log("i was here")
-<<<<<<< HEAD
-            await fetch('https://chainlink.chainbros.xyz//delete-folder', {
-=======
             await fetch('https://chainlink.chainbros.xyz/delete-folder', {
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

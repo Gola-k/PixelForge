@@ -159,22 +159,12 @@ app.post("/upload", upload.single("file"), (req, res) => {
   res.send(`https://chainlink.chainbros.xyz/preview-content`); // Replace with actual URL
 });
 
-<<<<<<< HEAD
-    res.send(`https://chainlink.chainbros.xyz/preview-content`); // Replace with actual URL
-  });
-=======
-app.post("/play", async (req, res) => {
-  // console.log(req.body.url)
-  const { url } = req.body;
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
-
   if (!url || typeof url !== "string") {
     return res.status(400).send("Invalid data format. Please send a string.");
   }
   const ind = url.lastIndexOf("/");
   const fileName = url.substring(ind + 1);
 
-<<<<<<< HEAD
 app.post("/play",async (req,res)=>{
     // console.log(req.body.url)
     const {url} = req.body;
@@ -204,27 +194,6 @@ app.post("/play",async (req,res)=>{
       res.send(`https://chainlink.chainbros.xyz/folder-content/${fileName}`); 
     }
 })
-=======
-  console.log("file name is - ", fileName);
-  const dest = path.join(__dirname, "downloads", fileName, `${fileName}.zip`); // Destination path to save the file
-
-  try {
-    downloadFile(url, dest)
-      .then(() => {
-        console.log("File downloaded successfully!");
-        // Unzip the downloaded file
-        return unzipFileAndStartServer(dest);
-      })
-      .catch((err) => {
-        console.error("Failed to download file:", err);
-      });
-  } catch (error) {
-    res.status(404);
-  } finally {
-    res.send(`https://chainlink.chainbros.xyz/folder-content/${fileName}`);
-  }
-});
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
 
 app.get("/delete-temp", async (req, res) => {
   const folderPath = path.join(__dirname, "tempPlay");

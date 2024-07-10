@@ -167,7 +167,6 @@ export const archiveFiles = async ({
                   } else {
                     const formData = new FormData();
                     formData.append('file', blob);
-<<<<<<< HEAD
                     console.log("formdata ----->>>>>>>",formData)
                 
                     fetch('https://chainlink.chainbros.xyz/upload', {
@@ -177,28 +176,11 @@ export const archiveFiles = async ({
                     .then(response => response.text())
                     .then(port => {
                         const serverUrl = "https://chainlink.chainbros.xyz/preview-content";
-=======
-                    console.log('formdata ----->>>>>>>', formData);
-
-                    fetch('https://chainlink.chainbros.xyz/upload', {
-                      method: 'POST',
-                      body: formData,
-                    })
-                      .then(response => response.text())
-                      .then(port => {
-                        const serverUrl =
-                          'https://chainlink.chainbros.xyz/preview-content';
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
                         const newWindow = window.open(serverUrl, '_blank');
                         const checkWindowClosed = setInterval(async () => {
                           if (newWindow.closed) {
                             clearInterval(checkWindowClosed);
-<<<<<<< HEAD
                             await fetch('https://chainlink.chainbros.xyz/delete-temp',/* {
-=======
-                            await fetch(
-                              'https://chainlink.chainbros.xyz/delete-temp' /* {
->>>>>>> a9ccdf154fbf2d0f5f4ac3d8da016270f57f81fc
                               method: 'POST',
                               headers: {
                                 'Content-Type': 'application/json',
